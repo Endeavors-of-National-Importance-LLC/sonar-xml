@@ -12,6 +12,8 @@ jobs:
     name: Release
     runs-on: github-ubuntu-latest-s
     steps:
-      - name: Release
-        run: |
-          echo "This is where the release process would be executed."
+      - name: Get Release Version
+        id: get-release-version
+        uses: SonarSource/release-github-actions/get-release-version@v1
+        with:
+          branch: master
