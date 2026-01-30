@@ -7,6 +7,9 @@ on:
     branches:
       - tt/*
 
+env:
+  JIRA_PROJECT_KEY: "SONARXML"
+
 jobs:
   release:
     name: Release
