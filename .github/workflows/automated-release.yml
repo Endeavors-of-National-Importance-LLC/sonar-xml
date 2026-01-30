@@ -17,3 +17,7 @@ jobs:
         uses: SonarSource/release-github-actions/get-release-version@v1
         with:
           branch: master
+      - name: Get Jira Version
+        id: get-jira-version
+        uses: SonarSource/release-github-actions/get-jira-version@v1
+
