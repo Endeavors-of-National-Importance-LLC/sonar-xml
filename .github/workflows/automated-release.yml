@@ -1,0 +1,17 @@
+name: Automated Release
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - tt/*
+
+jobs:
+  release:
+    name: Release
+    runs-on: github-ubuntu-latest-s
+    steps:
+      - name: Release
+        run: |
+          echo "This is where the release process would be executed."
