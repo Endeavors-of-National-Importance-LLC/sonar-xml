@@ -17,7 +17,15 @@ jobs:
         uses: SonarSource/release-github-actions/get-release-version@v1
         with:
           branch: master
+      
       - name: Get Jira Version
         id: get-jira-version
         uses: SonarSource/release-github-actions/get-jira-version@v1
+      
+      - name: Get Jira Release Notes
+        id: get-jira-release-notes
+        if: inputs.release-notes == ''
+        uses: SonarSource/release-github-actions/get-jira-release-notes@v1
+        with:
+          issue-types: "New Feature,False Positive,False Negative,Bug,Improvement,Task"
 
